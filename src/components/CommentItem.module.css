@@ -1,0 +1,201 @@
+.commentItem {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  overflow: visible; 
+}
+
+.commentItem:hover {
+  transform: translateY(-2px);
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.content {
+  flex: 1;
+}
+
+.commentText {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #333;
+  max-height: 25px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: max-height 0.3s ease;
+}
+
+.commentText p {
+  margin: 0;
+}
+
+.commentText img {
+  max-width: 100%;
+  max-height: 200px;
+  margin: 10px 0px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expanded {
+  max-height: none; 
+}
+
+.commentImage {
+  max-width: 100%;
+  max-height: 200px;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.taggedUser {
+  color: #007bff; 
+  font-weight: bold;
+}
+
+.replyInput {
+  margin-top: 10px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.replyInput input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  width: 300px;
+}
+
+.replyInput button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #61dafb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.replyInput button:hover {
+  background-color: #21a1f1;
+}
+
+.replyInput button:active {
+  background-color: #1b82c0;
+}
+
+.reactions {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  max-width: fit-content;
+}
+
+.reactions button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #61dafb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.emojiPicker {
+  border: 1px solid #f1f1f1;
+  padding: 5px;
+  min-width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  margin: 0 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: white !important;
+  text-transform: capitalize;
+}
+
+.commonRightBorder {
+  border-right: 1px solid gray;
+  margin: 0px 10px;
+  height: 20px;
+}
+
+.rightBorder {
+  border-right: 1px solid gray;
+  margin: 0px 10px 0px 0px;
+  height: 20px;
+}
+
+.reactions button:hover {
+  background-color: #21a1f1;
+}
+
+.reactions button:active {
+  background-color: #1b82c0;
+}
+
+.expandButton {
+  background: none;
+  border: none;
+  color: #61dafb;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.timestamp {
+  border-left: 1px solid gray;
+  padding-left: 10px;
+}
+
+.timestamp::first-letter {
+  text-transform: uppercase;
+}
+
+
+@media (max-width: 768px) {
+  .profileImage {
+    width: 40px;
+    height: 40px;
+  }
+
+  .commentItem {
+    flex-direction: column;
+  }
+
+  .reactions button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .replyInput button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .replyInput input {
+    padding: 6px;
+    font-size: 12px;
+  }
+}

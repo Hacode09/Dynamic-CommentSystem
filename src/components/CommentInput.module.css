@@ -1,0 +1,94 @@
+.container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto; 
+}
+
+.editorContainer {
+  margin-bottom: 15px;
+}
+
+.fileInputWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap; 
+}
+
+.customFileButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #61dafb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 10px;
+}
+
+.customFileButton:hover {
+  background-color: #21a1f1;
+}
+
+.customFileButton:active {
+  background-color: #1b82c0;
+  transform: scale(0.98);
+}
+
+.fileName {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px; 
+  flex-grow: 1;
+  word-break: break-all; 
+}
+
+.fileInput {
+  display: none;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%; 
+  margin-top: 10px; 
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button:active {
+  background-color: #003f7f;
+  transform: scale(0.98);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .customFileButton {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .fileName {
+    font-size: 12px;
+  }
+
+  .button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
