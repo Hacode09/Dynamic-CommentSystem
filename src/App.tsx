@@ -2,6 +2,8 @@ import React from "react";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import CommentInput from "./components/CommentInput";
 import CommentList from "./components/CommentList";
+import styles from "./components/CommentInput.module.css";
+
 
 const App = () => {
   const { signInWithGoogle, user } = useAuth();
@@ -10,7 +12,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className={styles.wrapper}>
       {user ? (
         <>
           <CommentInput onCommentPosted={handleCommentPosted} />

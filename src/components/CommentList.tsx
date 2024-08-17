@@ -53,20 +53,20 @@ const CommentList: React.FC = () => {
 
   return (
     <div>
-      <div className={styles.sortButtons}>
+      {paginatedComments && paginatedComments.length>0 && <div className={styles.sortButtons}>
         <button className={styles.sortButton} onClick={handleSortByLatest}>
           Sort by Latest
         </button>
         <button className={styles.sortButton} onClick={handleSortByPopularity}>
           Sort by Popularity
         </button>
-      </div>
+      </div>}
 
       {paginatedComments.map((comment) => (
         <CommentItem key={comment.id} comment={comment} />
       ))}
 
-      <div className={styles.sortButtons}>
+      {comments && comments.length>8 && <div className={styles.sortButtons}>
         <button
           className={`${styles.paginationButton} ${
             page === 0 ? "disabled" : ""
@@ -85,7 +85,7 @@ const CommentList: React.FC = () => {
         >
           Next
         </button>
-      </div>
+      </div>}
     </div>
   );
 };
