@@ -3,6 +3,7 @@ import { AuthProvider, useAuth } from "./context/AuthContext";
 import CommentInput from "./components/CommentInput";
 import CommentList from "./components/CommentList";
 import styles from "./components/CommentInput.module.css";
+import googleSignInStyles from './components/GoogleSignInButton.module.css'; 
 
 
 const App = () => {
@@ -13,13 +14,14 @@ const App = () => {
 
   return (
     <div className={styles.wrapper}>
+      {!user && <h1 className={styles.heading}>Comment System</h1>}
       {user ? (
         <>
           <CommentInput onCommentPosted={handleCommentPosted} />
           <CommentList />
         </>
       ) : (
-        <button onClick={signInWithGoogle}>Sign in with Google</button>
+        <button className={googleSignInStyles.googleSignInButton} onClick={signInWithGoogle}>Sign in with Google</button>
       )}
     </div>
   );

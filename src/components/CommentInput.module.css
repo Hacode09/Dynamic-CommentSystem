@@ -2,6 +2,15 @@
   max-width: 600px;
   margin: 0 auto; 
 }
+.heading {
+  font-size: 2rem; 
+  color: #333; 
+  margin-bottom: 20px; 
+  margin-top: 150px;
+  text-align: center; 
+  font-weight: bold; 
+}
+
 .container {
   padding: 20px;
   background-color: #f9f9f9;
