@@ -20,7 +20,7 @@ const CommentInput: React.FC<CommentInputProps> = ({ onCommentPosted }) => {
 
   const handlePostComment = async () => {
     if (!user) return;
-
+    
     const content = editorState.getCurrentContent();
     const contentHtml = draftToHtml(convertToRaw(content));
 
